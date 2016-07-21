@@ -83,12 +83,13 @@ class EllipticCurve:
         a = self.getA()
         b = self.getB()
         p = self.getP()
-        temp = Point(0, 1, 0)
+        temp = Point()
+        infinity = Point()
         multiple = 0
         for l in factors:
             temp = temp.add(G.mult(l-multiple, a, b, p), a, b, p)
             multiple = l
-            if temp == Point(0, 1, 0):
+            if temp == infinity:
                 return l
         return -1 # error
 

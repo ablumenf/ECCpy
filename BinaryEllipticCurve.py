@@ -93,9 +93,10 @@ class BinaryEllipticCurve:
         temp = 1 << self._modulus.degree()
         N = int(temp + 1 + 2*math.sqrt(temp)) # use max possible order to avoid quadratic time in computing the curve order
         P = PolynomialPoint()
+        infinity = PolynomialPoint()
         for i in range(1, N+1):
             P = P.add(G, a, b, modulus)
-            if P == PolynomialPoint():
+            if P == infinity:
                 return i
         return -1 # error
 
@@ -125,7 +126,7 @@ class BinaryEllipticCurve:
                 rightside = (x*x*x + a*x*x + b) % modulus
                 if leftside == rightside:
                     foundPoint = True
-            s += str(PolynomialPoint(x, y, 1)) + "\n"
+            s += str(PolynomialPoint(x, y, Polynomial("1"))) + "\n"
             count += 1
         s += str(count) + " points were generated.\n"
         return s
