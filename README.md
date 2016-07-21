@@ -58,9 +58,9 @@ polynomial and R(z), respectively.
 
 - BinaryEllipticCurve.py: A class that implements elliptic curves over binary fields, including logarithms, orders, as well as lists of points. Also a static method for listing elliptic curves.
 - ECC.py: The driver for the GUI application.
-- ECMath.py: Various static methods with implementations of mathematical functions (modular exponentiation, inverses, square roots, primality testing, etc.)
-- EllipticCurve.py: A class that implements elliptic curves, including logarithms, orders, as well as lists of points. Also a static method for listing elliptic curves.
+- ECMath.py: Various functions with implementations of mathematical functions (modular exponentiation, inverses, square roots, primality testing, etc.)
+- EllipticCurve.py: A class that implements elliptic curves, including logarithms, orders, as well as lists of points. Also a couple static methods for listing elliptic curves.
 - Point.py: A class that implements points. 3D points are used for projective coordinates, but they're only printed as 2D points. Point addition and multiplication are implemented here.
 - Polynomial.py: A class that implements (sparse) Polynomials mod 2 using sets.
 - PolynomialPoint.py: A class that implements polynomial points. 3D points are used for LD projective coordinates, but they're only printed as 2D points. Point addition and multiplication are implemented here.
-- TabbedGUI.py: A class that implements all the GUI details (Tab class, as well as the details for each of the tabs GF(p), GF(2^r), and Misc.).
+- TabbedGUI.py: Various classes that implement all the GUI details (Tab class, as well as the details for each of the tabs GF(p), GF(2^r), and Misc.). The basic tabbed GUI setup was written by Sunjay Varma, and modified by me.
