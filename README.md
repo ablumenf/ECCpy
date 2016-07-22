@@ -27,7 +27,7 @@ of Pollard-Rho for factoring integers, though. This is used for finding the orde
 of a point in the prime case: first find the order of the curve, then check
 all factors of that order to find the order of a point. I did not use factorization
 for finding the order of a point for the binary case, though, because finding the order
-of a curve over GF(2^r) is quite inefficient. I simply used the upper bound q + 2sqrt(q)
+of a curve over GF(2^r) is quite inefficient. I simply used the upper bound q + 1 + 2sqrt(q)
 as an upper bound on the order and did a linear brute-force search (where q = 2^r).
 This upper bound is implied by Hasse's Theorem.
 
